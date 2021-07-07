@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" [routerLink]="['/']" style="margin-left: 10px;">
+        <img src="../../../assets/img.png" width="40" height="40" class="d-inline-block align-top" alt="">
+        Travelgram
+    </a> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <!-- if the user is present then printing email -->
+            
+            <a
+            *ngIf="!email"  
+            [routerLink]="['/']"
+            class="nav-item nav-link"
+            >Home</a>
+            <!-- conditionally rendering links  -->
+            <a
+            *ngIf="!email"
+            [routerLink]="['/signin']"
+            routerLinkActive="active" 
+            class="nav-item nav-link">Sign In</a>
+            <a
+            *ngIf="!email"
+            [routerLink]="['/signup']"
+            routerLinkActive="active" 
+             class="nav-item nav-link">Sign Up</a>
+
+            
+
+            
+        </div>
+        
+
+    </div>
+    <div *ngIf="email" class="navbar-text float-left" style="margin-right: 20px;">
+        {{email}}</div>
+    <a
+            *ngIf="email"
+            [routerLink]="['/addpost']" 
+            class="nav-item nav-link btn btn-warning text-primary"
+            style="margin-right: 10px ;">
+                Post Your Story</a>
+    <button 
+        *ngIf="email"
+        (click)="handleSignOut()"
+        style="margin-right: 10px;"
+        class="nav-item nav-link btn btn-danger text-white">Log Out</button>
+</nav>

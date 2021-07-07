@@ -1,0 +1,6 @@
+ng add @angular/fire
+npm install bootstrap firebase ngx-toastr uuid browser-image-resizer
+npm install @fortawesome/angular-fontawesome
+npm install @fortawesome/fontawesome-svg-core
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-regular-svg-icons
