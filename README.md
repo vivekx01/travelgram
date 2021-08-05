@@ -3,6 +3,7 @@
 Find the deployed version of the app here:
 https://travelgram-9b12e.web.app/
 
+Note: Not optimized for viewing on Mobile devices
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
